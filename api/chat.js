@@ -1,5 +1,6 @@
 
 export default async function handler(req, res) {
+  console.log("RACONAI API RECIBIÓ:", req.method);
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Método no permitido" });
   }
